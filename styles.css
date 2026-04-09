@@ -1,0 +1,133 @@
+/* ─── Variables de Color ─── */
+:root {
+  --primario: #4a90e2;
+  --exito: #2e7d32;
+  --error: #c62828;
+  --fondo: #f4f7f6;
+  --texto: #333;
+  --borde: #ccc;
+}
+
+/* ─── Estilos Generales ─── */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.contenedor {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primario);
+}
+
+/* ─── Grupos de Campo ─── */
+.campo-grupo {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+input {
+  padding: 0.8rem;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primario);
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+/* ─── Estados de Validación ─── */
+input.invalido {
+  border-color: var(--error);
+}
+
+input.invalido:focus {
+  box-shadow: 0 0 5px rgba(198, 40, 40, 0.3);
+}
+
+input.valido {
+  border-color: var(--exito);
+}
+
+/* ─── Mensajes de Error ─── */
+.msg-error {
+  color: var(--error);
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+  min-height: 1rem;
+  display: none; /* Oculto por defecto */
+}
+
+.msg-error.visible {
+  display: block;
+}
+
+/* ─── Indicador de Fortaleza (JS Dinámico) ─── */
+#fortaleza {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* ─── Botón y Éxito ─── */
+button {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: var(--primario);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: #357abd;
+}
+
+#mensaje-exito {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #e8f5e9;
+  color: var(--exito);
+  border: 1px solid var(--exito);
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.oculto {
+  display: none !important;
+}
