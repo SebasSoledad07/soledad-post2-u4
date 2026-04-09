@@ -112,6 +112,7 @@ document.querySelector("#telefono").addEventListener("blur", validarTelefono);
 document.querySelector("#confirmar").addEventListener("input", () => {
   if (document.querySelector("#confirmar").value) limpiarError("confirmar");
 });
+
 // ─── Manejo del envío
 const form = document.querySelector("#form-registro");
 form.addEventListener("submit", (e) => {
